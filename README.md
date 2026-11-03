@@ -108,17 +108,105 @@ This project addresses three main business problems:
 2. Which states have the highest number of customers, and what are their preferred payment methods?
 3. What is the average delivery time, and how satisfied are customers with their shopping experience?
 
+## 🧮 DAX Measures
 
+The following DAX measures were created for business analysis:
 
+```dax
+Total Sales =
+SUM('olist_order_items_dataset'[price])
 
+Total Orders =
+DISTINCTCOUNT('olist_orders_dataset'[order_id])
 
+Total Customers =
+DISTINCTCOUNT('olist_customers_dataset'[customer_unique_id])
 
+Average Order Value =
+DIVIDE([Total Sales], [Total Orders], 0)
 
+Total Items Sold =
+COUNTROWS('olist_order_items_dataset')
 
+Total Freight =
+SUM('olist_order_items_dataset'[freight_value])
 
+Average Review Score =
+AVERAGE('olist_order_reviews_dataset'[review_score])
+```
 
+## 🗂️ Dataset Information
 
+**Dataset:** Brazilian E-Commerce Public Dataset by Olist
 
+**Source:** Kaggle
+
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+The dataset contains information about:
+- Orders
+- Order Items
+- Payments
+- Customers
+- Products
+- Sellers
+- Reviews
+- Geolocation
+- Product Category Translation
+
+## 📁 Project Structure
+
+All project files are maintained in a single folder:
+
+```text
+Olist-Ecommerce-PowerBI-Project/
+│
+├── Olist_Dashboard.pbix
+├── dashboard.png
+├── olist_orders_dataset.csv
+├── olist_order_items_dataset.csv
+├── olist_order_payments_dataset.csv
+├── olist_customers_dataset.csv
+├── olist_products_dataset.csv
+├── olist_sellers_dataset.csv
+├── olist_order_reviews_dataset.csv
+├── olist_geolocation_dataset.csv
+├── product_category_name_translation.csv
+└── README.md
+```
+
+## 💡 Key Learnings
+
+Through this project, I gained practical experience in:
+
+- Data cleaning and transformation using Power Query.
+- Creating relationships between multiple tables.
+- Developing DAX measures for business KPIs.
+- Designing interactive dashboards using Power BI.
+- Analyzing business performance through data visualization.
+- Converting business questions into meaningful insights.
+
+## 🚀 Conclusion
+
+This project demonstrates how Power BI can transform raw e-commerce data into an interactive business intelligence dashboard.
+
+It provides insights into sales performance, customer behavior, product categories, payment preferences, customer satisfaction, and delivery efficiency to support data-driven decision-making.
+
+---
+
+## 👩‍💻 Project Details
+
+**Project Name:** Olist E-Commerce Sales & Customer Analytics Dashboard
+
+**Domain:** E-Commerce / Business Intelligence
+
+**Tool:** Microsoft Power BI
+
+**Project Type:** Data Analytics & Visualization
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository and share your feedback!
 
 
 
