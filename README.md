@@ -105,7 +105,7 @@ This project addresses three main business problems:
 ## 🔍 Key Business Questions
 
 1. Which product categories generate the highest sales, and how do sales trends change over time?
-2. 2. Which states have the highest number of customers, and what are their preferred payment methods?
+2. Which states have the highest number of customers, and what are their preferred payment methods?
 3. What is the average delivery time, and how satisfied are customers with their shopping experience?
 
 
